@@ -23,8 +23,8 @@ import android.content.IntentFilter;
 import android.content.RestrictionsManager;
 import android.os.Bundle;
 
-public class EmmAppConfig extends CordovaPlugin {
-  public static final String TAG = "EmmAppConfig";
+public class AppConfig extends CordovaPlugin {
+  public static final String TAG = "AppConfig";
   
   private CallbackContext _listenerCallbackContext;
   private BroadcastReceiver _changeReceiver;
@@ -32,7 +32,7 @@ public class EmmAppConfig extends CordovaPlugin {
   /**
    * Constructor.
    */
-  public EmmAppConfig() {
+  public AppConfig() {
   }
 
   /**
@@ -142,7 +142,7 @@ public class EmmAppConfig extends CordovaPlugin {
       appContext.unregisterReceiver(_changeReceiver);
     }
 
-    // We need to listen to app_restrictions change events to update emmappconfig
+    // We need to listen to app_restrictions change events to update appconfig
     IntentFilter intentFilter = new IntentFilter();
     intentFilter.addAction(Intent.ACTION_APPLICATION_RESTRICTIONS_CHANGED);
     

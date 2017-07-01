@@ -7,9 +7,9 @@
 #include <sys/sysctl.h>
 
 #import <Cordova/CDV.h>
-#import "JETEmmAppConfig.h"
+#import "JETAppConfig.h"
 
-@implementation JETEmmAppConfig
+@implementation JETAppConfig
 
 // The Managed app configuration dictionary pushed down from an MDM server are stored in this key.
 static NSString * const kConfigurationKey = @"com.apple.configuration.managed";
@@ -42,7 +42,7 @@ static NSString * const kConfigurationKey = @"com.apple.configuration.managed";
 // Register app config change listener
 - (void)registerChangedListener:(CDVInvokedUrlCommand*)command
 {
-  JETEmmAppConfig * __weak weakSelf = self; 
+  JETAppConfig * __weak weakSelf = self; 
   
   // Add Notification Center observer to be alerted of any change to NSUserDefaults.
   // Managed app configuration changes pushed down from an MDM server appear in NSUSerDefaults.

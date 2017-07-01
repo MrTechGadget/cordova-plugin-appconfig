@@ -1,11 +1,11 @@
 # cordova-plugin-AppConfig 1.1.3
 
-This plugin defines a global `cordova.plugins.EmmAppConfig` object, which provides information on EMM application configuration (or managed app configuration).
+This plugin defines a global `cordova.plugins.AppConfig` object, which provides information on EMM application configuration (or managed app configuration).
 Although the object is in the global scope, it is not available until after the `deviceready` event.
 
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-        console.log(cordova.plugins.EmmAppConfig.getValue("serverURL"));
+        console.log(cordova.plugins.AppConfig.getValue("serverURL"));
     }
 
 
@@ -71,7 +71,7 @@ This is an open source project maintained by audioeng. Pull Requests are current
 for details.
 
 ## [License](LICENSE.md)
-Based on work by Oracle, updated by Joshua Clark.
+Based on work by Oracle, updated and adapted by Joshua Clark.
 
 Copyright (c) 2017 Oracle and/or its affiliates
 The Universal Permissive License (UPL), Version 1.0

@@ -18,7 +18,7 @@ var argscheck = require('cordova/argscheck'),
  * registering change listener.
  * @constructor
  */
-function EmmAppConfig()
+function AppConfig()
 {
   this._appConfig = null;
   this._hasListener = false;
@@ -33,10 +33,10 @@ function EmmAppConfig()
         channel.onCordovaInfoReady.fire();
       };
       var errorCallback = function(e) {
-        console.log('[ERROR] Error from EmmAppConfig.getConfigInfo: ' + e);
+        console.log('[ERROR] Error from AppConfig.getConfigInfo: ' + e);
       };
 
-      exec(successCallback, errorCallback, 'EmmAppConfig', 'getConfigInfo', []);
+      exec(successCallback, errorCallback, 'AppConfig', 'getConfigInfo', []);
     }
   );
 }
@@ -49,7 +49,7 @@ function EmmAppConfig()
  * @return {Any} the value of the keyed entry specified by "configKey", or 
  *   an object that contains all the values.
  */
-EmmAppConfig.prototype.getValue = function(configKey)
+AppConfig.prototype.getValue = function(configKey)
 {
   if (this._appConfig)
   {
@@ -75,12 +75,12 @@ EmmAppConfig.prototype.getValue = function(configKey)
  *   is not available.  The listener should call getValue to get the new values
  *   and decide how it handles any change.
  */
-EmmAppConfig.prototype.registerChangedListener = function(listener)
+AppConfig.prototype.registerChangedListener = function(listener)
 {
   if (listener && typeof listener == 'function')
   {
     // Add an event listener at the Javascript layer
-    document.addEventListener('emmappconfigchanged', listener);
+    document.addEventListener('appconfigchanged', listener);
 
     // We only need to add our own listener at the native layer once
     if (!this._hasListener)
@@ -91,16 +91,16 @@ EmmAppConfig.prototype.registerChangedListener = function(listener)
 
       var successCallback = function(info) {
         self._appConfig = info;
-        var event = new Event('emmappconfigchanged');
+        var event = new Event('appconfigchanged');
         document.dispatchEvent(event);
       };
       var errorCallback = function(e) {
-        console.log('[ERROR] Error from EmmAppConfig.registerChangedListener: ' + e);
+        console.log('[ERROR] Error from AppConfig.registerChangedListener: ' + e);
       };
 
-      exec(successCallback, errorCallback, 'EmmAppConfig', 'registerChangedListener', []);
+      exec(successCallback, errorCallback, 'AppConfig', 'registerChangedListener', []);
     }
   }
 };
 
-module.exports = new EmmAppConfig();
+module.exports = new AppConfig();

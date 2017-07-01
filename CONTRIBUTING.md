@@ -1,11 +1,10 @@
-# Contributing to cordova-plugin-emm-app-config
+# Contributing to cordova-plugin-appconfig
 
 *Copyright (c) 2017 Oracle and/or its affiliates
 The Universal Permissive License (UPL), Version 1.0*
 
-**Pull requests are currently not being accepted for this project.**  
+**Pull requests are being accepted for this project.**  
 
-We plan to provide this functionality in the future. At that time, you will need to follow [The Oracle Contributor Agreement](https://www.oracle.com/technetwork/community/oca-486395.html)
-(OCA).
+I plan to work on making this a Ionic Native plugin. If you can help with this, please contact me!
 
-If you have ideas, comments, or issues related to generator, swing on by the [Oracle JET discussion forum.](https://community.oracle.com/community/development_tools/oracle-jet)
+If you have ideas, comments, or issues related to this project, please log them or contact me.
