@@ -11,7 +11,7 @@ Although the object is in the global scope, it is not available until after the 
 
 ## Installation
 
-    cordova plugin add cordova-plugin-AppConfig
+    cordova plugin add cordova-plugin-appconfig
 
 ## Methods
 
