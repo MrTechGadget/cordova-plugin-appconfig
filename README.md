@@ -1,4 +1,4 @@
-# cordova-plugin-AppConfig 1.1.4
+# cordova-plugin-appconfig 1.1.4
 
 This plugin defines a global `cordova.plugins.AppConfig` object, which provides information on EMM application configuration (or managed app configuration).
 Although the object is in the global scope, it is not available until after the `deviceready` event.
